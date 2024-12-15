@@ -1,0 +1,805 @@
+<!DOCTYPE HTML>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Murder In Osaka - A Panda-monium mystery with a twist!</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+				<!-- Note: The "styleN" class below should match that of the banner element. -->
+					<header id="header" class="alt style2">
+						<a href="index.html" class="logo"><strong>welcome</strong> <span>to Murder in Osaka</span> <strong>[made with Unity]</strong></a>
+						<nav>
+							<a href="#menu">Go Back</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<ul class="links">
+							<li><a href="index.html">Yes</a></li>
+						</ul>
+						<ul class="actions stacked">
+						</ul>
+					</nav>
+
+				<!-- Banner -->
+				<!-- Note: The "styleN" class below should match that of the header element. -->
+					<section id="banner" class="style2">
+						<div class="inner">
+							<span class="image">
+								<img src="images/OsakaGif2.gif" alt="" />
+							</span>
+							<header class="major">
+								<h1>Murder in Osaka</h1>
+							</header>
+							<div class="content">
+								<p>This three-week project holds a special place for me—I'm 
+									incredibly nostalgic about everything we put into it, from 
+									the eerie game sounds and haunting soundtrack to the subtle 
+									breathing noises the player makes while walking or standing 
+									idle, all crafted to deepen the horror and immersion. 
+									Building this game was an absolute blast, especially since 
+									I got to work alongside such a talented team.</p>
+							</div>
+						</div>
+					</section>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- One -->
+							<section id="one">
+								<div class="inner">
+									<header class="major">
+										<h2>My bizarre adventure</h2>
+									</header>
+									<p>The idea for this game actually came from a surreal experience I 
+										had while flying to Japan with friends—one of whom ended up working 
+										on the project too. We got lost in a bamboo forest, and while it was 
+										creepy and stressful at the time, there was this strange sense of 
+										nostalgia mixed in. We wanted to recreate that vibe in the game,
+									    capturing that same eerie yet nostalgic atmosphere. Plus, I’m a 
+										huge fan of Japanese aesthetics, so setting it in Osaka felt perfect. 
+										Not only did the “creepy” moment happen there, but Osaka holds a lot 
+										of personal beauty and nostalgia for me.</p>
+								</div>
+							</section>
+
+						<!-- Two -->
+							<section id="two" class="spotlights">
+								<section>
+									<a class="image">
+										<img src="images/OsakaCookiesFootage-ezgif.com-cut.gif" alt="" data-position="center center" />
+									</a>
+									
+									<div class="content">
+										<div class="inner">
+											<header class="major">
+												<h3>Introduction</h3>
+											</header>
+											<p>Osaka Cookies is a first-person horror game where you’re 
+												plunged into a dark murder mystery in the heart of Osaka. 
+												Your mission? Investigate the crime scene, question witnesses, 
+												and unravel the truth—all while dodging a frenzied panda determined 
+												to silence anyone who gets too close. This project was a blast to create, 
+												and I’m beyond grateful for the chance to bring it to life with such a 
+												talented team.</p>
+											
+										</div>
+									</div>
+								</section>
+								<section>
+									
+									<div class="content">
+										<div class="inner">
+											<header class="major">
+												<h3>Work I'm Proud Of</h3>
+											</header>
+											<p>In this section, I’ll showcase code and other elements from this 
+												project that I’m especially proud of. I’ll share insights into 
+												what I’ve learned along the way and highlight the aspects I found 
+												most interesting.</p>
+											<ul class="actions">
+												
+											</ul>
+										</div>
+									</div>
+								</section>
+								<section>
+									<a class="image">
+										<img src="images/footage5-ezgif.com-video-to-gif-converter.gif" alt="" data-position="25% 25%" />
+									</a>
+								
+									<div class="content">
+										<div class="inner">
+											<header class="major">
+												<h3>AI Movement Script</h3>
+											</header>
+											<p>In this project, I had the opportunity 
+												to develop a straightforward AI system 
+												that initially follows a simple patrol pattern. 
+												However, the real magic happens when the AI detects 
+												the player is too close—it seamlessly transitions into a 
+												chase mode, tailing the player until they move out of range. 
+												Once the player is sufficiently far away, the AI returns to its 
+												original path. </p>
+
+											<p>	What I love most about this process is exploring 
+												new methods for coding AI. I always find it exciting 
+												to witness their quirky and unexpected movements, pondering 
+												what might have gone wrong in the code. The challenge of 
+												troubleshooting and refining the AI to achieve a polished, 
+												fully functional version is incredibly rewarding.</p>
+											
+												<header class="minor">
+													<h3>How the Script Works</h3>
+												</header>
+												<a class="image">
+													<img src="images/ezgif.com-cut.gif" alt="" data-position="25% 25%" />
+												</a>
+												<p>Here are some key components:</p>
+
+												<header class="minor">
+													<h5>Initialization</h5>
+												</header>
+												<p>NavMeshAgent: The script starts by obtaining the NavMeshAgent component, which is responsible for navigating the environment. This component allows the AI to move along a navigation mesh, enabling pathfinding and obstacle avoidance.</p>
+												
+												<p>State Variables: Several boolean flags (m_IsPatrol, m_CaughtPlayer, m_PlayerInRange) are initialized to manage the AI's behavior states. The current waypoint index is set to zero to begin patrolling from the first waypoint.</p>
+												<pre>
+													<code>
+													  m_PlayerPosition = Vector3.zero;
+															m_IsPatrol = true;
+															m_CaughtPlayer = false;
+															m_PlayerInRange = false;
+															m_WaitTime = startWaitTime;
+															m_TimeToRotate = timeToRotate;
+														   
+															Idle.gameObject.SetActive(true);
+													
+													
+													</code>
+													</pre>
+													
+													<style>
+													pre {
+														background: #2d2d2d;
+														color: #f8f8f2;
+														padding: 15px;
+														border-radius: 5px;
+														white-space: pre-wrap;  /* Ensure text wraps */
+														word-wrap: break-word;  /* Allow breaking long words */
+														overflow: hidden;  /* Hide horizontal scrolling */
+													}
+													code {
+														font-family: 'Courier New', Courier, monospace;
+														font-size: 18px; /* Adjust font size */
+													}
+													</style>
+												<p>Speed Configuration: The AI sets its movement speed for walking and running using navMeshAgent.speed.
+												</p>
+
+												<header class="minor">
+													<h5>Update Loop</h5>
+												</header>
+												<p>State Decision: In the Update() method, the AI continuously checks its surroundings by calling the EnviromentView() method. Based on the results, it determines whether to chase the player or continue patrolling.
+												</p>
+												<pre>
+													<code>
+													 void Update()
+														{
+															EnviromentView();
+													
+															if(!m_IsPatrol)
+															{
+																Chasing();
+															}
+															else
+															{
+																Patroling();
+															}
+														}
+													
+													
+													</code>
+													</pre>
+													
+													<style>
+													pre {
+														background: #2d2d2d;
+														color: #f8f8f2;
+														padding: 15px;
+														border-radius: 5px;
+														white-space: pre-wrap;  /* Ensure text wraps */
+														word-wrap: break-word;  /* Allow breaking long words */
+														overflow: hidden;  /* Hide horizontal scrolling */
+													}
+													code {
+														font-family: 'Courier New', Courier, monospace;
+														font-size: 18px; /* Adjust font size */
+													}
+													</style>
+												<p>Speed Configuration: The AI sets its movement speed for walking and running using navMeshAgent.speed.</p>
+												<p>State Decision: In the Update() method, the AI continuously checks its surroundings by calling the EnviromentView() method. Based on the results, it determines whether to chase the player or continue patrolling.</p>
+												<p>Separation of Concerns: The AI has two primary methods to handle its behavior: First one is "Chasing", which handles what happens when the player is detected. Second one is "Patrolling", manages the Ai's movement between waypoints when the player is not nearby.</p>
+												<header class="minor">
+													<h5>Chasing Logic</h5>
+												</header>
+												<p>Detection: When the AI detects the player is within its view radius and not already caught, it activates the chase mode. This involves changing the AI's state to stop patrolling and instead run towards the player’s last known position.</p>
+												<pre>
+													<code>
+													
+													if (!m_CaughtPlayer)
+															{
+																Move(speedRun);
+																navMeshAgent.SetDestination(m_PlayerPosition);
+															  
+															}
+													
+													
+													
+													</code>
+													</pre>
+													
+													<style>
+													pre {
+														background: #2d2d2d;
+														color: #f8f8f2;
+														padding: 15px;
+														border-radius: 5px;
+														white-space: pre-wrap;  /* Ensure text wraps */
+														word-wrap: break-word;  /* Allow breaking long words */
+														overflow: hidden;  /* Hide horizontal scrolling */
+													}
+													code {
+														font-family: 'Courier New', Courier, monospace;
+														font-size: 18px; /* Adjust font size */
+													}
+													</style>
+												<p>Audio Feedback: It activates the chase audio while deactivating the idle sound, enhancing immersion and signaling the change in behavior.</p>
+												<p>Distance Management: The AI continually checks the distance to the player.
+													If the player is beyond a certain range (6 units), the AI will return to patrolling after waiting a cooldown period, allowing it to reset.
+													If the player is close (within 2.5 units), the AI will stop to give a sense of tension before resuming its chase if the player moves away.</p>
+												<header class="minor">
+													<h5>Patrolling Logic</h5>
+												</header>
+												<p>Waypoint Navigation: The AI moves between predefined waypoints, pausing at each one until a timer expires or it detects the player.</p>
+												<p>Player Proximity Handling: If the player comes close during patrol.
+													The AI stops its movement to focus on locating the player.
+													It can rotate towards the last known position of the player and resume chasing if detected again.</p>
+												<p>Looping Through Waypoints: When the AI reaches a waypoint, it waits for a specified time before moving to the next waypoint in the list, creating a realistic patrolling behavior.</p>
+												<header class="minor">
+													<h5>Movement Control</h5>
+												</header>
+												<p>Move() Function: This method takes a speed parameter (either walking or running) and updates the NavMeshAgent to move at that speed. It ensures that the AI is active and moving towards its current target.</p>
+												<p>Stop() Function: This method stops the AI's movement by setting navMeshAgent.isStopped to true, which can happen during waiting periods or when the AI needs to pause for detection.</p>
+												<header class="minor">
+													<h5>Player Detection</h5>
+												</header>
+												<p>EnviromentView(): This method is crucial for player detection. It employs a sphere collider to detect nearby players within a specified viewRadius.</p>
+												<pre>
+													<code>
+													
+													 void EnviromentView()
+														{
+															Collider[] playerInRange = Physics.OverlapSphere(transform.position, viewRadius, playerMask);
+													
+															for(int i = 0; i < playerInRange.Length; i++)
+															{
+																Transform player = playerInRange[i].transform;
+																Vector3 dirToPlayer = (player.position - transform.position).normalized;
+																if(Vector3.Angle(transform.forward, dirToPlayer) < viewAngle / 2)
+																{
+																	float dstToPlayer = Vector3.Distance(transform.position, player.position);
+																	if(!Physics.Raycast(transform.position, dirToPlayer, dstToPlayer, obstacleMask))
+																	{
+																		m_PlayerInRange = true;
+																		m_IsPatrol = false;
+																	}
+																	else
+																	{
+																		m_PlayerInRange = false;
+																	}
+																}
+																if(Vector3.Distance(transform.position, player.position)> viewRadius)
+																{
+																	m_PlayerInRange = false;
+																}
+																if (m_PlayerInRange)
+																{
+																	m_PlayerPosition = player.transform.position;
+																}
+															}  
+														}
+													
+													
+													
+													
+													</code>
+													</pre>
+													
+													<style>
+													pre {
+														background: #2d2d2d;
+														color: #f8f8f2;
+														padding: 15px;
+														border-radius: 5px;
+														white-space: pre-wrap;  /* Ensure text wraps */
+														word-wrap: break-word;  /* Allow breaking long words */
+														overflow: hidden;  /* Hide horizontal scrolling */
+													}
+													code {
+														font-family: 'Courier New', Courier, monospace;
+														font-size: 18px; /* Adjust font size */
+													}
+													</style>	
+												<p>Field of View Calculation: The AI checks if the player is within the AI's field of view by calculating the angle between the AI's forward direction and the direction to the player. If this angle is less than half of viewAngle, it indicates the player is within sight.</p>
+												<p>Line of Sight: It also uses a raycast to determine if there are any obstacles between the AI and the player, ensuring the player is not obscured by walls or other objects. If the player is both in view and within range, the AI sets its target to the player’s position.</p>
+										
+
+							
+												
+													<h3>Takeaways</h3>
+												</header>
+												<p>
+													The AI movement script I developed was an incredible learning experience—think of it as a rollercoaster ride through the world of game development, with just enough twists and turns to keep things exciting!
+													
+													First and foremost, the importance of state management became abundantly clear. Managing transitions between patrolling, chasing, and idle states felt a bit like herding cats. One minute, the AI is casually strolling around, and the next, it’s in full-on chase mode, ready to turn the player into a snack! Learning to use boolean flags and conditions to ensure smooth transitions not only enhanced realism but also kept players guessing—always a good thing when you want to induce a little panic.
+													
+													Then came the eye-opening realization of environmental awareness. It turns out that detecting the player isn’t enough; the AI also needs to be aware of its surroundings. Using raycasting for line-of-sight checks was like giving my AI a pair of glasses—suddenly, it could see the obstacles in its way and not just run face-first into walls! This aspect of AI development showed me just how crucial attention to detail is when crafting engaging gameplay.
+													
+													Navigating the AI with Unity’s NavMeshAgent was like playing with a double-edged sword. On one hand, it makes pathfinding feel like a breeze; on the other, fine-tuning its parameters for smooth movement can feel like trying to assemble IKEA furniture without instructions. I learned that adjusting settings like stopping distance and rotation speed is essential for achieving a natural feel—no one wants an AI that dances awkwardly around the player, right?
+													
+													Finally, debugging taught me patience—oh, the patience! AI behavior can be unpredictably quirky, leading to moments of sheer frustration where I wondered if my code was possessed. But every resolved bug was like a mini victory, offering a sense of accomplishment and a deeper understanding of the intricate dance that is AI programming.</p>
+													<p>This project reinforced the need for meticulous planning and testing in AI development, with each takeaway—whether it’s managing states, honing environmental awareness, or just surviving the debugging process—equipping me with skills for more dynamic and responsive AI in future projects. Can’t wait to see what bizarre behaviors my next AI will have!</p>
+										</div>
+
+										<div>
+									<section>
+											
+											<header class="major">
+												<h3>Panda Jumpscare Script</h3>
+											</header>
+											<p>The following script triggers a jump scare effect by
+												displaying an image and playing audio when the playerenters a specifidied area 
+												and hides the image after a short delay. 
+											</p>
+											<header class="minor">
+												<h3>How the Script Works</h3>
+												<p>PandaImage: A reference to a GameObject (likely a UI element such as an image or sprite) that will be shown during the jump scare. The public modifier allows you to assign this in the Unity Inspector.
+													PandaAudio: A reference to an AudioSource component that will play an audio clip when the jump scare is triggered. It also can be assigned in the Inspector.</p>
+												<p>This method is called when the script instance is being loaded. Here, it ensures that the PandaImage is inactive at the beginning (SetActive(false)), so it won't be visible when the game starts.</p>
+												<p>This method is triggered when another collider enters the trigger collider attached to the GameObject this script is attached to.</p>
+												<p>Parameter: The Collider other parameter represents the collider that entered the trigger area.</p>
+												<p>Inside the method:
+													It checks if the colliding object's tag is "Player". This ensures that only the player character can trigger the jump scare.
+													If the condition is met:
+													PandaImage.SetActive(true);: This line makes the image visible, initiating the jump scare.
+													PandaAudio.Play();: This plays the audio associated with the jump scare, providing an auditory cue to the player.
+													StartCoroutine(DisableImg());: This starts a coroutine named DisableImg, which will handle hiding the image after a delay.
+													</p>
+												<p>DisableImg Coroutine: This method is defined as a coroutine, allowing it to pause execution and yield control back to Unity.
+													Yield Instruction: The line yield return new WaitForSeconds(2); pauses the coroutine for 2 seconds, which is the duration for which the jump scare image will be displayed.
+													After the wait, PandaImage.SetActive(false); is called to hide the image again, completing the jump scare effect.</p>
+												
+												
+												<header class="minor">
+													<h3>Takeaways</h3>
+												</header>
+												<h5>What Was Hard</h5>
+												<p>Understanding Unity’s Trigger System: I found it challenging to grasp how colliders and triggers work in Unity, especially as someone new to game development. Setting up the correct colliders and ensuring they interacted properly with the player required a lot of trial and error.
+
+													</p>
+												<p> Managing audio playback was tricky for me, particularly when working with the AudioSource component. I had to make sure the audio played at the right time and adjusted the volume levels for balance within the game, which took some fine-tuning.</p>
+												<p>Implementing coroutines required me to understand Unity’s asynchronous execution better. I had to be precise with the timing for showing and hiding the image, which involved debugging when things didn't feel right in gameplay.</p>
+												<p>Ensuring that references to the GameObject and AudioSource were correctly assigned in the Inspector led to confusion at times. Mistakes in this area resulted in the jump scare not triggering as expected.</p>
+												<h5>What Was Fun</h5>
+												<p>Designing and implementing jump scare effects was incredibly rewarding for me, as it significantly contributed to the game’s atmosphere. I loved seeing players react to the unexpected scares—it added a thrilling element to the experience.</p>
+												<p>The simplicity of using SetActive to show or hide the image provided immediate visual feedback, which I found satisfying during testing. Watching changes happen in real-time kept me engaged in the process.</p>
+												<p>Adding audio to the jump scare enhanced the emotional impact, and I really enjoyed this aspect of game development. Choosing the right sound effect to complement the visual scare felt like a creative endeavor that elevated the experience.</p>
+												<p>Iterating on the scare’s timing, visual presentation, and sound was enjoyable. Testing different combinations led to unique and memorable scare moments in the game, which kept the development process fresh and exciting.</p>
+												<p>Observing how players interacted with the jump scare, whether they laughed or screamed, was a highlight for me. Seeing their reactions provided valuable feedback for future game design and deepened my connection to the project.</p>
+												<h5>Conclusion</h5>
+												<p>Working with the JumpScare script was a blend of challenges and enjoyable experiences for me. While understanding Unity’s mechanics and ensuring everything worked seamlessly was daunting at times, the creative process of designing jump scares and witnessing player reactions made it a fun and rewarding endeavor in game development.</p>
+													
+											</header>
+
+											<header class="major">
+												<h3>Player Movement</h3>
+											</header>
+											<p> The PlayerMovement script provides smooth movement 
+												controls for a player character in a Unity game. It 
+												incorporates features like ground detection, speed 
+												regulation, and responsive input handling to create 
+												a fluid movement experience. By using physics forces
+												 with a Rigidbody component, the script ensures that
+												  the player's movement feels realistic and is
+												   affected by the game's physics system. This setup
+												    allows players to navigate the game environment 
+													intuitively, enhancing their overall gameplay 
+													experience. 
+											</p>
+											<header class="minor">
+												<h3>How the Script Works</h3>
+												
+												<header class="minor">
+													<h5>Movement Variables</h5>
+												<p>These variables handle speed, drag, and ground checking.
+
+													[SerializeField] float moveSpeed;
+													Defines the player’s movement speed. SerializeField makes this variable adjustable in the Unity Inspector, letting developers fine-tune the speed without modifying the code.
+													
+													[SerializeField] float groundDrag;
+													Specifies the amount of drag applied when the player is on the ground. Drag reduces the player’s speed naturally when they’re grounded, giving more control.</p>
+													<header class="minor">
+														<h5>Ground Check Variables</h5>
+													<p>[SerializeField] float playerHeight;
+														Represents the player's height, used in calculating the distance for ground detection.
+														
+														[SerializeField] LayerMask whatIsGround;
+														A LayerMask that defines what the script should consider as "ground." Only objects with the assigned layer will be recognized as ground for the player.
+														
+														bool grounded;
+														Stores whether the player is currently grounded, allowing conditional handling of movement and drag based on the grounded state.</p>
+														<pre>
+															<code>
+															
+															 [Header("Ground Check")]
+																[SerializeField] float playerHeight;
+																[SerializeField] LayerMask whatIsGround;
+																bool grounded;
+															
+															
+															</code>
+															</pre>
+															
+															<style>
+															pre {
+																background: #2d2d2d;
+																color: #f8f8f2;
+																padding: 15px;
+																border-radius: 5px;
+																white-space: pre-wrap;  /* Ensure text wraps */
+																word-wrap: break-word;  /* Allow breaking long words */
+																overflow: hidden;  /* Hide horizontal scrolling */
+															}
+															code {
+																font-family: 'Courier New', Courier, monospace;
+																font-size: 18px; /* Adjust font size */
+															}
+															</style>
+													
+														<header class="minor">
+															<h5>Input and Orientation Variables</h5>
+															<p>These variables store player input and direction:
+
+																[SerializeField] Transform orientation;
+																Refers to a Transform object that sets the player’s forward and right directions. It can be used to define custom directional movement, regardless of camera or object orientation.
+																
+																float horizontalInput; float verticalInput;
+																Store input values along the x and z axes. These values allow the player to move left, right, forward, or backward.
+																
+																Vector3 moveDirection;
+																Defines the actual movement direction by combining horizontal and vertical inputs with the orientation.
+																
+																Rigidbody playerBody;
+																References the player’s Rigidbody component, essential for physics-based movement.</p>
+												
+																<pre>
+																	<code>
+																	
+																	[SerializeField] Transform orientation;
+																	
+																		float horizontalInput;
+																		float verticalInput;
+																	
+																		Vector3 moveDirection;
+																		Rigidbody playerBody;
+																	
+																	
+																	
+																	</code>
+																	</pre>
+																	
+																	<style>
+																	pre {
+																		background: #2d2d2d;
+																		color: #f8f8f2;
+																		padding: 15px;
+																		border-radius: 5px;
+																		white-space: pre-wrap;  /* Ensure text wraps */
+																		word-wrap: break-word;  /* Allow breaking long words */
+																		overflow: hidden;  /* Hide horizontal scrolling */
+																	}
+																	code {
+																		font-family: 'Courier New', Courier, monospace;
+																		font-size: 18px; /* Adjust font size */
+																	}
+																	</style>
+																<header class="minor">
+																	<h5>Method: Start()</h5>
+																<p>Initialize Rigidbody: The Rigidbody component is retrieved and stored in playerBody.
+																	Freeze Rotation: playerBody.freezeRotation = true; prevents the player from rotating due to physics interactions, ensuring stability and easier control.</p>
+																	<pre>
+																		<code>
+																		
+																		private void Start()
+																			{
+																				playerBody = GetComponent<Rigidbody>();
+																				playerBody.freezeRotation = true;
+																			}
+																		
+																		
+																		
+																		
+																		</code>
+																		</pre>
+																		
+																		<style>
+																		pre {
+																			background: #2d2d2d;
+																			color: #f8f8f2;
+																			padding: 15px;
+																			border-radius: 5px;
+																			white-space: pre-wrap;  /* Ensure text wraps */
+																			word-wrap: break-word;  /* Allow breaking long words */
+																			overflow: hidden;  /* Hide horizontal scrolling */
+																		}
+																		code {
+																			font-family: 'Courier New', Courier, monospace;
+																			font-size: 18px; /* Adjust font size */
+																		}
+																		</style>
+																	<header class="minor">
+																		<h5>Method: Update()</h5>
+																	<p>Update() is called every frame, managing input, drag, and ground detection. Ground Check: Uses a downward raycast to check if the player is grounded. The raycast length is based on playerHeight, with an extra margin of 0.2f for accuracy. If the raycast detects a collision with the ground layer, grounded is set to true.
+																		Input Handling: Calls MyInput() to get the player’s input.
+																		Speed Control: Calls SpeedControl() to limit the player’s speed.
+																		Drag Adjustment: Sets drag based on grounded; if grounded, drag is set to groundDrag, otherwise it’s zero to allow smoother movement in the air.</p>
+																		<pre>
+																			<code>
+																			
+																			private void Update()
+																				{
+																					// Ground check
+																					grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.2f, whatIsGround);
+																			
+																					MyInput();
+																					SpeedControl();
+																			
+																					// Handle drag
+																					if (grounded)
+																						playerBody.drag = groundDrag;
+																					else
+																						playerBody.drag = 0f;
+																				}
+																			
+																			
+																			
+																			
+																			
+																			</code>
+																			</pre>
+																			
+																			<style>
+																			pre {
+																				background: #2d2d2d;
+																				color: #f8f8f2;
+																				padding: 15px;
+																				border-radius: 5px;
+																				white-space: pre-wrap;  /* Ensure text wraps */
+																				word-wrap: break-word;  /* Allow breaking long words */
+																				overflow: hidden;  /* Hide horizontal scrolling */
+																			}
+																			code {
+																				font-family: 'Courier New', Courier, monospace;
+																				font-size: 18px; /* Adjust font size */
+																			}
+																			</style>
+																		<header class="minor">
+																			<h5>Method: FixedUpdate()</h5>
+																		<p>FixedUpdate() is called at fixed time intervals, making it ideal for physics updates. It manages movement by calling MovePlayer(). Movement: MovePlayer() is called to apply directional force to the player based on input.</p>
+																		<pre>
+																			<code>
+																			
+																			private void FixedUpdate()
+																				{
+																					MovePlayer();
+																				}
+																			
+																			
+																			
+																			
+																			
+																			</code>
+																			</pre>
+																			
+																			<style>
+																			pre {
+																				background: #2d2d2d;
+																				color: #f8f8f2;
+																				padding: 15px;
+																				border-radius: 5px;
+																				white-space: pre-wrap;  /* Ensure text wraps */
+																				word-wrap: break-word;  /* Allow breaking long words */
+																				overflow: hidden;  /* Hide horizontal scrolling */
+																			}
+																			code {
+																				font-family: 'Courier New', Courier, monospace;
+																				font-size: 18px; /* Adjust font size */
+																			}
+																			</style>
+																		<header class="minor">
+																			<h5>Method: MyInput()</h5>
+																		<p>Handles player input along the horizontal and vertical axes. Input Axes: Uses Input.GetAxisRaw("Horizontal") and Input.GetAxisRaw("Vertical") to get raw input values (-1, 0, or 1), providing direct control for moving left/right and forward/back.
+																		</p>
+																	    <pre>
+																			<code>
+																			
+																			  private void MyInput()
+																				{
+																					horizontalInput = Input.GetAxisRaw("Horizontal");
+																					verticalInput = Input.GetAxisRaw("Vertical");
+																				}
+																			
+																			
+																			
+																			
+																			</code>
+																			</pre>
+																			
+																			<style>
+																			pre {
+																				background: #2d2d2d;
+																				color: #f8f8f2;
+																				padding: 15px;
+																				border-radius: 5px;
+																				white-space: pre-wrap;  /* Ensure text wraps */
+																				word-wrap: break-word;  /* Allow breaking long words */
+																				overflow: hidden;  /* Hide horizontal scrolling */
+																			}
+																			code {
+																				font-family: 'Courier New', Courier, monospace;
+																				font-size: 18px; /* Adjust font size */
+																			}
+																			</style>
+																		<header class="minor">
+																			<h5>Method: MovePlayer()</h5>
+																		<p>Moves the player based on the direction and speed. Movement Direction: Combines orientation.forward with verticalInput and orientation.right with horizontalInput to calculate moveDirection.
+																			Force Application: Applies force in moveDirection using ForceMode.Force, scaled by moveSpeed * 10f for fine-tuning movement. normalized ensures the direction vector is kept to a length of 1, maintaining consistent speed in any direction.</p>
+																			<pre>
+																				<code>
+																				
+																				  private void MovePlayer()
+																					{
+																						moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
+																						playerBody.AddForce(moveDirection.normalized * moveSpeed * 10f, ForceMode.Force);
+																				
+																					}
+																				
+																				
+																				
+																				</code>
+																				</pre>
+																				
+																				<style>
+																				pre {
+																					background: #2d2d2d;
+																					color: #f8f8f2;
+																					padding: 15px;
+																					border-radius: 5px;
+																					white-space: pre-wrap;  /* Ensure text wraps */
+																					word-wrap: break-word;  /* Allow breaking long words */
+																					overflow: hidden;  /* Hide horizontal scrolling */
+																				}
+																				code {
+																					font-family: 'Courier New', Courier, monospace;
+																					font-size: 18px; /* Adjust font size */
+																				}
+																				</style>
+																			
+																			<header class="minor">
+																				<h5>Method: SpeedControl()</h5>
+																			<p>Limits the player’s speed if it exceeds moveSpeed. Flat Velocity Calculation: Creates flatVelocity by setting the y-component of playerBody.velocity to 0. This allows the script to check and limit only horizontal speed, leaving vertical movement (like jumping) unaffected.
+																				Speed Limiting: If flatVelocity exceeds moveSpeed, it’s normalized to the moveSpeed limit, ensuring the player doesn't move faster than intended. The player’s velocity is then adjusted to this limited speed.</p>
+																				<pre>
+																					<code>
+																					
+																					  private void SpeedControl()
+																						{
+																							Vector3 flatVelocity = new Vector3(playerBody.velocity.x, 0f, playerBody.velocity.z);
+																					
+																							if(flatVelocity.magnitude < moveSpeed)
+																							{
+																								Vector3 limitedVelocity = flatVelocity.normalized * moveSpeed;
+																								playerBody.velocity = new Vector3(limitedVelocity.x, playerBody.velocity.x, limitedVelocity.z);
+																							}
+																						}
+																					
+																					
+																					</code>
+																					</pre>
+																					
+																					<style>
+																					pre {
+																						background: #2d2d2d;
+																						color: #f8f8f2;
+																						padding: 15px;
+																						border-radius: 5px;
+																						white-space: pre-wrap;  /* Ensure text wraps */
+																						word-wrap: break-word;  /* Allow breaking long words */
+																						overflow: hidden;  /* Hide horizontal scrolling */
+																					}
+																					code {
+																						font-family: 'Courier New', Courier, monospace;
+																						font-size: 18px; /* Adjust font size */
+																					}
+																					</style>
+																		<header class="minor">
+													<h3>Takeaways</h3>
+												</header>
+												
+											
+												</header>
+												<h5>What Was Hard</h5>
+												<p>Working through this script was honestly a mix of tough learning 
+													and enjoyable moments. The hard part was definitely wrapping my 
+													head around the physics details, especially when it came to 
+													understanding the ground check with a raycast. Visualizing how 
+													the ray shoots down from the player to detect if they're on the 
+													ground required some mental gymnastics, especially when it came 
+													to calculating the right length for the ray based on the player’s 
+													height. It’s a cool technique, but getting it right wasn’t 
+													exactly intuitive. Another tricky bit was managing the flat 
+													velocity to control speed without affecting jumps or falls. 
+													Isolating horizontal movement while letting vertical movement 
+													stay unaffected was one of those things that looks simple once 
+													it’s in place, but it actually took a minute to fully grasp why 
+													we’d ignore the y-axis here. I could see how this could get even 
+													trickier with more complex movement systems.</p>
+													<h5>What Was Fun</h5>
+													</p>
+												<p>On the fun side, experimenting with drag was awesome! I’d never thought of using drag to create that “grounded” feel, where movement slows naturally when you're on solid ground but feels freer in the air. It was satisfying to see how a small change in drag values could make movement feel more realistic and intentional. Playing around with drag while toggling between grounded and airborne states made me feel like I was adding a layer of polish that could actually enhance the player experience.
+
+													In the end, while the learning curve around physics was challenging, it was also exciting to see how each piece worked together to create smooth, grounded movement. The script showed me that even tiny adjustments in physics can make movement feel more responsive and immersive—and seeing it all in action was totally rewarding.</p>
+													<header class="major">
+														<h3>Thank you for your time!</h3>
+													<a  class="image">
+														<img src="images/scarypadaimage.webp" alt="" data-position="25% 25%" />
+													</a>
+										</div>
+
+									
+								
+
+						<!-- Three -->
+							
+							
+				
+					
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
